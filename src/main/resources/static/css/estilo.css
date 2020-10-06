@@ -1,0 +1,28 @@
+.container-principal{
+    width: 750px;
+    height: 800px;
+    border: 2px solid black;
+    background-color: rgb(238, 238, 238);
+    border-radius: 10px;
+}
+.form-titulo{
+    text-align: center;
+    background: white;
+    color: black;
+    margin-top: 3px;
+    padding: 5px;
+    border-radius: 10px;
+}
+.form-novo{
+    text-align: right;
+}
+.container-adicionar{
+    width: 750px;
+    height: 600px;
+    border: 2px solid black;
+    background-color: rgb(238, 238, 238);
+    border-radius: 10px;
+}
+.btn{
+    margin-top: 20px;
+}
