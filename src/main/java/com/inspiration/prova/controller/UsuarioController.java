@@ -61,6 +61,16 @@ public class UsuarioController {
     public String deleteUsuario(@PathVariable long id, Model model){
         model.addAttribute("usuario", usuarioRepository.findById(id));
 
-        return "funcionario/delete";
+        return "usuario/delete";
+    }
+    @PostMapping("/usuario/delete")
+    public String deleteUsuario(Usuario usuario){
+        try {
+            usuarioRepository.delete(usuario);
+        }
+        catch (Exception e){
+            System.out.println("Erro: " + e.getMessage());
+        }
+        return "redirect:/usuario/list";
     }
 }

@@ -26,3 +26,6 @@
 .btn{
     margin-top: 20px;
 }
+.btn-delete{
+    margin-top: -20px;
+}

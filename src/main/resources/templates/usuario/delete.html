@@ -25,36 +25,64 @@
             </ul>
         </nav>
 
-        <div class="container container-adicionar">
-        <form th:action="@{/usuario/delete}" th:object="${usuario}">
-            
-            <div class="form-group">
-                <label>Código</label>
-                <input class="form-control" type="number" th:field="${usuario.id}" readonly>
-            </div>
-            <div class="form-group">
-                <label>Nome</label>
-                <input class="form-control" type="text" th:field="${usuario.nome}" readonly>
-            </div>
-            <div class="form-group">
-                <label>Login</label>
-                <input class="form-control" type="text" th:field="${usuario.login}" readonly>
-            </div>
-            <div class="form-group">
-                <label>Senha</label>
-                <input class="form-control" type="text" th:field="${usuario.senha}" readonly>
-            </div>
-            <div class="form-group">
-                <label>CPF</label>
-                <input class="form-control" type="text" th:field="${usuario.cpf}" readonly>
-            </div>
+
+
+        <div class="container-md container-adicionar">
+                <div class="form-titulo">
+                    <h3>Adicionar</h3>
+                </div>
+
+                <form th:action="@{/usuario/delete}" th:object="${usuario}"
+                method="POST">
+
+                    <div class="alert alert-danger">
+                            voce tem certeza que deseja excluir este usuario?
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Código</label>
+                        <input class="form-control" type="number" th:field="${usuario.id}" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Nome</label>
+                        <input class="form-control" type="text" th:field="${usuario.nome}" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Login</label>
+                        <input class="form-control" type="text" th:field="${usuario.login}" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Senha</label>
+                        <input class="form-control" type="text" th:field="${usuario.senha}" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>CPF</label>
+                        <input class="form-control" type="text" th:field="${usuario.cpf}" readonly>
+                    </div>
+
+                    <div class="btn-delete">
+                        <button class="btn btn-secondary" type="button" onclick="window.location.href-'../list'">Cancelar</button>
+
+                        <button class="btn btn-danger" type="submit">Deletar</button>
+                    </div>
+
+
+
+                </form>
 
 
 
 
-        </form>
+        </div>
 
-    
+
+
+
+
+
+
+
 
 
 
